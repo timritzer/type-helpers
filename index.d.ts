@@ -99,3 +99,12 @@ export type IsObjectArray<TArray> = TArray extends Array<infer TItem>
 		? TArray
 		: never
 	: never;
+
+export type ToUnion<Object extends Record<any, any>> = Object extends Record<any, infer TValue> ? TValue : never;
+export type ToIntersection<Object extends Record<any, any>> = UnionToIntersection<ToUnion<Object>>;
+
+export type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (
+  k: infer I
+) => void
+  ? I
+  : never;
