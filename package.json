@@ -1,0 +1,26 @@
+{
+  "name": "type-helpers",
+  "version": "0.5.0",
+  "description": "A toolkit of additional Typescript Helper types including Object Path helpers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timritzer/type-helpers.git"
+  },
+  "keywords": [
+    "typescript",
+    "types"
+  ],
+  "author": "Timothy Ritzer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timritzer/type-helpers/issues"
+  },
+  "homepage": "https://github.com/timritzer/type-helpers#readme",
+  "dependencies": {
+    "typescript": "^4.1.5"
+  }
+}
