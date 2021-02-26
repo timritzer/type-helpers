@@ -1,6 +1,6 @@
 {
   "name": "type-helpers",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "A toolkit of additional Typescript Helper types including Object Path helpers",
   "main": "index.js",
   "scripts": {
