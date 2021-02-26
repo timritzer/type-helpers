@@ -87,15 +87,15 @@ export type ElementIfArray<TMaybeArray> = TMaybeArray extends Array<infer TElem>
 export type IfDefined<TObj> = Exclude<TObj, undefined>;
 
 export type IsPlainObject<TObject> = IfDefined<TObject> extends AnyStringRecord
-	? TObject extends IsArray<TObject>
+	? IfDefined<TObject> extends IsArray<TObject>
 		? never
 		: TObject
 	: never;
 
-export type IsArray<TObj> = IfDefined<TObj >extends AnyArray ? TObj : never;
+export type IsArray<TObj> = IfDefined<TObj> extends AnyArray ? TObj : never;
 
 export type IsObjectArray<TArray> = IfDefined<TArray> extends Array<infer TItem>
-	? TItem extends IsPlainObject<TItem>
+	? IfDefined<TItem> extends IsPlainObject<TItem>
 		? TArray
 		: never
 	: never;
